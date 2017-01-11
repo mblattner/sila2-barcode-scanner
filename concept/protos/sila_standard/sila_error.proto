@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+// Namespace
+package org.sila_standard.v2.realease_candidate.sila_error;
+
+// Info:
+// This Message is used to serialize the SiLA Error Message
+// The serialized data will be sent via the grpc error message
+
+
+// Error Message as described in the Specification
+message SiLA_Error_Message
+{
+    // Error type
+    string type = 1;
+
+    // Human-readable desription of the error
+    string description = 2;
+
+    // Standard Error Name
+    string standard_error_name = 3;
+
+    // URI for Error Handling Feature
+    string redirect = 4;
+}

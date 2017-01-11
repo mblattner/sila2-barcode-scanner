@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package sila2.org.sila_standard.release_candidate.common;
+
+
+// Empty Message
+// Used for Properties
+message Empty
+{}
+
+// String Message
+message String
+{
+    string data = 1;
+}
+
+
+message Double
+{
+    double data = 1;
+}
+

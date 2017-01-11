@@ -1,0 +1,47 @@
+syntax = "proto3";
+import "stdlib.proto";
+
+option java_multiple_files = true;
+option java_package = "sila2.com.wega-it.common.canBarcodeReaderConfiguration";
+option java_outer_classname = "Matrix200Proto";
+option objc_class_prefix = "MTX";
+
+package sila2.org.sila_standard.release_candidate.canSetConfiguration;
+
+service canBarcodeReaderConfiguration {
+   //sets all BarcodeReaderConfiguration Parameter
+   rpc setConfiguration(BarcodeReaderConfiguration) returns (status) {}    
+   //reads all BarocdeReaderConfiguration Parameter
+   rpc getConfiguration(Empty) returns (BarcodeReaderConfiguration) {}    
+}
+
+service canSetConfiguration {
+  //
+  // sets one configuration parameter.
+  rpc setConfigParameter(ConfigurationParameter) returns (status) {}    
+}
+
+service canReadConfiguration {
+   rpc getConfigParamter (ConfigurationParameter) returns (ConfigurationParameter) {}
+}
+
+message status {
+    string  value=1;
+}
+
+message Empty
+{
+}
+
+message ConfigurationParameter {	
+	string name = 1;
+	string value  = 2;
+}
+
+message  BarcodeReaderConfiguration 
+{
+     string baudRate = 1;
+	 string connetionType = 2;
+	 string deviceAddress =3;
+	 string portName = 4;
+}
