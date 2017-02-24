@@ -6,26 +6,26 @@ option java_package = "sila2.com.wega-it.common.barcodeReader";
 option java_outer_classname = "Matrix200Proto";
 option objc_class_prefix = "MTX";
 
-package sila2.org.sila_standard.release_candidate.canReadCode;
+package org.sila_standard.v2.realease_candidate.canReadCode;
 
-service canReadCode {
+service can_ReadCode {
 // A simple RPC.
   //
   // returns a scan Barode .
     
-  rpc readCodeWithException(Empty) returns (ScannerResponse) {}      
-  rpc readCode(ScannerRequest) returns (ScannerResponse) {}      
+  rpc read_CodeWithException(stdlib.Empty) returns (ScannerResponse) {}      
+  rpc read_Code(ScannerRequest) returns (ScannerResponse) {}       
 }
 
 
   //
   // returns a scan Barode .
-service canReadCodeContinuously {
+service can_ReadCodeContinuously {
 	rpc startReading (ScannerRequest) returns (stream ScannerResponse) {}  
 	rpc stopReading (ScannerRequest) returns (ScannerResponse) {}  
 }
 
-service readCodeContinuously {
+service read_CodeContinuously {
 	rpc openReader (stream ScannerContinousRequest) returns (stream ScannerResponse) {}  	
 }
 

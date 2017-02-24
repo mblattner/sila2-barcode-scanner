@@ -1,7 +1,6 @@
 syntax = "proto3";
 
-package sila2.org.sila_standard.release_candidate.common;
-
+package org.sila_standard.v2.realease_candidate.stdlib;
 
 // Empty Message
 // Used for Properties

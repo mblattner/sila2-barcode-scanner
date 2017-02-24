@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BarcodeReaderClient", "devices\BarcodeReader\BarcodeReaderClient.csproj", "{862A1C3E-BE1D-4E11-930F-BF77C00045ED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BarcodeReaderDevice", "devices\BarcodeReaderDevice\BarcodeReaderDevice.csproj", "{05CF9BD0-9A56-4EAF-8E64-A1E1C70429D6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sila", "sila\sila.csproj", "{62B6D349-463C-4357-9C66-A3EA3464E998}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{862A1C3E-BE1D-4E11-930F-BF77C00045ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{862A1C3E-BE1D-4E11-930F-BF77C00045ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{862A1C3E-BE1D-4E11-930F-BF77C00045ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{862A1C3E-BE1D-4E11-930F-BF77C00045ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05CF9BD0-9A56-4EAF-8E64-A1E1C70429D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05CF9BD0-9A56-4EAF-8E64-A1E1C70429D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05CF9BD0-9A56-4EAF-8E64-A1E1C70429D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05CF9BD0-9A56-4EAF-8E64-A1E1C70429D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62B6D349-463C-4357-9C66-A3EA3464E998}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62B6D349-463C-4357-9C66-A3EA3464E998}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62B6D349-463C-4357-9C66-A3EA3464E998}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62B6D349-463C-4357-9C66-A3EA3464E998}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

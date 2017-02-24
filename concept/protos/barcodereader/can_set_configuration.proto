@@ -6,7 +6,7 @@ option java_package = "sila2.com.wega-it.common.canBarcodeReaderConfiguration";
 option java_outer_classname = "Matrix200Proto";
 option objc_class_prefix = "MTX";
 
-package sila2.org.sila_standard.release_candidate.canSetConfiguration;
+package org.sila_standard.v2.realease_candidate.canSetConfiguration;
 
 service canBarcodeReaderConfiguration {
    //sets all BarcodeReaderConfiguration Parameter

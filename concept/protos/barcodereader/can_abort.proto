@@ -7,13 +7,13 @@ option java_package = "sila2.com.wega-it.common.";
 option java_outer_classname = "Matrix200Proto";
 option objc_class_prefix = "MTX";
 
-package sila2.org.sila_standard.release_candidate.canAbort;
+package org.sila_standard.v2.realease_candidate.canAbort;
 
 // Interface exported by the server.
 service abort {
   // A simple RPC.
   //  
-  rpc abort(Empty) returns (abortReply) {}  
+  rpc abort(stdlib.Empty) returns (abortReply) {}  
 }
 
 // 
