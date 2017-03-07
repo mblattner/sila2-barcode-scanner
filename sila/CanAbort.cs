@@ -25,11 +25,11 @@ namespace Org.SilaStandard.V2.RealeaseCandidate.CanAbort {
           string.Concat(
             "Cg9jYW5fYWJvcnQucHJvdG8SMG9yZy5zaWxhX3N0YW5kYXJkLnYyLnJlYWxl",
             "YXNlX2NhbmRpZGF0ZS5jYW5BYm9ydBoMc3RkbGliLnByb3RvIhwKCmFib3J0",
-            "UmVwbHkSDgoGc3RhdHVzGAEgASgJMocBCgVhYm9ydBJ+CgVhYm9ydBI1Lm9y",
+            "UmVwbHkSDgoGc3RhdHVzGAEgASgJMoYBCgVhYm9ydBJ9CgVhYm9ydBI0Lm9y",
             "Zy5zaWxhX3N0YW5kYXJkLnYyLnJlYWxlYXNlX2NhbmRpZGF0ZS5zdGRsaWIu",
-            "RW1wdHkaPC5vcmcuc2lsYV9zdGFuZGFyZC52Mi5yZWFsZWFzZV9jYW5kaWRh",
-            "dGUuY2FuQWJvcnQuYWJvcnRSZXBseSIAQjMKGXNpbGEyLmNvbS53ZWdhLWl0",
-            "LmNvbW1vbi5CDk1hdHJpeDIwMFByb3RvUAGiAgNNVFhiBnByb3RvMw=="));
+            "Vm9pZBo8Lm9yZy5zaWxhX3N0YW5kYXJkLnYyLnJlYWxlYXNlX2NhbmRpZGF0",
+            "ZS5jYW5BYm9ydC5hYm9ydFJlcGx5IgBCMwoZc2lsYTIuY29tLndlZ2EtaXQu",
+            "Y29tbW9uLkIOTWF0cml4MjAwUHJvdG9QAaICA01UWGIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.StdlibReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {

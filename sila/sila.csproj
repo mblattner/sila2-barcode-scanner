@@ -42,16 +42,16 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Interactive.Async, Version=3.0.1000.0, Culture=neutral, PublicKeyToken=94bc3704cddfc263, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\System.Interactive.Async.3.1.1\lib\net45\System.Interactive.Async.dll</HintPath>
-      <Private>True</Private>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CanAbort.cs" />
-    <Compile Include="CanReadCode.cs" />
+    <Compile Include="CanReadBarcode.cs" />
     <Compile Include="CanSetConfiguration.cs" />
     <Compile Include="grpc\CanAbortGrpc.cs" />
-    <Compile Include="grpc\CanReadCodeGrpc.cs" />
+    <Compile Include="grpc\CanReadBarcodeGrpc.cs" />
     <Compile Include="grpc\CanSetConfigurationGrpc.cs" />
     <Compile Include="grpc\IsSilaGrpc.cs" />
     <Compile Include="IsSila.cs" />

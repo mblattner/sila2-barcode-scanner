@@ -15,14 +15,14 @@ namespace Org.SilaStandard.V2.RealeaseCandidate.CanAbort {
   {
     static readonly string __ServiceName = "org.sila_standard.v2.realease_candidate.canAbort.abort";
 
-    static readonly Marshaller<global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.Empty> __Marshaller_Empty = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.Empty.Parser.ParseFrom);
+    static readonly Marshaller<global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.Void> __Marshaller_Void = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.Void.Parser.ParseFrom);
     static readonly Marshaller<global::Org.SilaStandard.V2.RealeaseCandidate.CanAbort.abortReply> __Marshaller_abortReply = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Org.SilaStandard.V2.RealeaseCandidate.CanAbort.abortReply.Parser.ParseFrom);
 
-    static readonly Method<global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.Empty, global::Org.SilaStandard.V2.RealeaseCandidate.CanAbort.abortReply> __Method_abort = new Method<global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.Empty, global::Org.SilaStandard.V2.RealeaseCandidate.CanAbort.abortReply>(
+    static readonly Method<global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.Void, global::Org.SilaStandard.V2.RealeaseCandidate.CanAbort.abortReply> __Method_abort = new Method<global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.Void, global::Org.SilaStandard.V2.RealeaseCandidate.CanAbort.abortReply>(
         MethodType.Unary,
         __ServiceName,
         "abort",
-        __Marshaller_Empty,
+        __Marshaller_Void,
         __Marshaller_abortReply);
 
     /// <summary>Service descriptor</summary>
@@ -38,7 +38,7 @@ namespace Org.SilaStandard.V2.RealeaseCandidate.CanAbort {
       ///  A simple RPC.
       ///   
       /// </summary>
-      public virtual global::System.Threading.Tasks.Task<global::Org.SilaStandard.V2.RealeaseCandidate.CanAbort.abortReply> abort(global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.Empty request, ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Org.SilaStandard.V2.RealeaseCandidate.CanAbort.abortReply> abort(global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.Void request, ServerCallContext context)
       {
         throw new RpcException(new Status(StatusCode.Unimplemented, ""));
       }
@@ -72,7 +72,7 @@ namespace Org.SilaStandard.V2.RealeaseCandidate.CanAbort {
       ///  A simple RPC.
       ///   
       /// </summary>
-      public virtual global::Org.SilaStandard.V2.RealeaseCandidate.CanAbort.abortReply abort(global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.Empty request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Org.SilaStandard.V2.RealeaseCandidate.CanAbort.abortReply abort(global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.Void request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return abort(request, new CallOptions(headers, deadline, cancellationToken));
       }
@@ -80,7 +80,7 @@ namespace Org.SilaStandard.V2.RealeaseCandidate.CanAbort {
       ///  A simple RPC.
       ///   
       /// </summary>
-      public virtual global::Org.SilaStandard.V2.RealeaseCandidate.CanAbort.abortReply abort(global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.Empty request, CallOptions options)
+      public virtual global::Org.SilaStandard.V2.RealeaseCandidate.CanAbort.abortReply abort(global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.Void request, CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_abort, null, options, request);
       }
@@ -88,7 +88,7 @@ namespace Org.SilaStandard.V2.RealeaseCandidate.CanAbort {
       ///  A simple RPC.
       ///   
       /// </summary>
-      public virtual AsyncUnaryCall<global::Org.SilaStandard.V2.RealeaseCandidate.CanAbort.abortReply> abortAsync(global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.Empty request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual AsyncUnaryCall<global::Org.SilaStandard.V2.RealeaseCandidate.CanAbort.abortReply> abortAsync(global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.Void request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return abortAsync(request, new CallOptions(headers, deadline, cancellationToken));
       }
@@ -96,7 +96,7 @@ namespace Org.SilaStandard.V2.RealeaseCandidate.CanAbort {
       ///  A simple RPC.
       ///   
       /// </summary>
-      public virtual AsyncUnaryCall<global::Org.SilaStandard.V2.RealeaseCandidate.CanAbort.abortReply> abortAsync(global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.Empty request, CallOptions options)
+      public virtual AsyncUnaryCall<global::Org.SilaStandard.V2.RealeaseCandidate.CanAbort.abortReply> abortAsync(global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.Void request, CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_abort, null, options, request);
       }

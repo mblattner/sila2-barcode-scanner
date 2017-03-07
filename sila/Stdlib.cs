@@ -24,14 +24,55 @@ namespace Org.SilaStandard.V2.RealeaseCandidate.Stdlib {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CgxzdGRsaWIucHJvdG8SLm9yZy5zaWxhX3N0YW5kYXJkLnYyLnJlYWxlYXNl",
-            "X2NhbmRpZGF0ZS5zdGRsaWIiBwoFRW1wdHkiFgoGU3RyaW5nEgwKBGRhdGEY",
-            "ASABKAkiFgoGRG91YmxlEgwKBGRhdGEYASABKAFiBnByb3RvMw=="));
+            "X2NhbmRpZGF0ZS5zdGRsaWIiVwoEVm9pZBJPCghtZXRhZGF0YRgBIAEoCzI9",
+            "Lm9yZy5zaWxhX3N0YW5kYXJkLnYyLnJlYWxlYXNlX2NhbmRpZGF0ZS5zdGRs",
+            "aWIuU2lMQV9NZXRhZGF0YSJoCgZTdHJpbmcSTwoIbWV0YWRhdGEYASABKAsy",
+            "PS5vcmcuc2lsYV9zdGFuZGFyZC52Mi5yZWFsZWFzZV9jYW5kaWRhdGUuc3Rk",
+            "bGliLlNpTEFfTWV0YWRhdGESDQoFdmFsdWUYAiABKAkiaQoHSW50ZWdlchJP",
+            "CghtZXRhZGF0YRgBIAEoCzI9Lm9yZy5zaWxhX3N0YW5kYXJkLnYyLnJlYWxl",
+            "YXNlX2NhbmRpZGF0ZS5zdGRsaWIuU2lMQV9NZXRhZGF0YRINCgV2YWx1ZRgC",
+            "IAEoAyJtCgtSZWFsTnVtYmJlchJPCghtZXRhZGF0YRgBIAEoCzI9Lm9yZy5z",
+            "aWxhX3N0YW5kYXJkLnYyLnJlYWxlYXNlX2NhbmRpZGF0ZS5zdGRsaWIuU2lM",
+            "QV9NZXRhZGF0YRINCgV2YWx1ZRgCIAEoASKNAQoNQ29tcGxleE51bWJlchJP",
+            "CghtZXRhZGF0YRgBIAEoCzI9Lm9yZy5zaWxhX3N0YW5kYXJkLnYyLnJlYWxl",
+            "YXNlX2NhbmRpZGF0ZS5zdGRsaWIuU2lMQV9NZXRhZGF0YRISCgpyZWFsX3Zh",
+            "bHVlGAIgASgBEhcKD2ltYWdpbmFyeV92YWx1ZRgDIAEoASKzAQoNUGh5c2lj",
+            "YWxWYWx1ZRJPCghtZXRhZGF0YRgBIAEoCzI9Lm9yZy5zaWxhX3N0YW5kYXJk",
+            "LnYyLnJlYWxlYXNlX2NhbmRpZGF0ZS5zdGRsaWIuU2lMQV9NZXRhZGF0YRIN",
+            "CgV2YWx1ZRgCIAEoARJCCgR1bml0GAMgASgLMjQub3JnLnNpbGFfc3RhbmRh",
+            "cmQudjIucmVhbGVhc2VfY2FuZGlkYXRlLnN0ZGxpYi5Vbml0ImYKBFVuaXQS",
+            "TwoIbWV0YWRhdGEYASABKAsyPS5vcmcuc2lsYV9zdGFuZGFyZC52Mi5yZWFs",
+            "ZWFzZV9jYW5kaWRhdGUuc3RkbGliLlNpTEFfTWV0YWRhdGESDQoFdmFsdWUY",
+            "AiABKAkiaQoHQm9vbGVhbhJPCghtZXRhZGF0YRgBIAEoCzI9Lm9yZy5zaWxh",
+            "X3N0YW5kYXJkLnYyLnJlYWxlYXNlX2NhbmRpZGF0ZS5zdGRsaWIuU2lMQV9N",
+            "ZXRhZGF0YRINCgV2YWx1ZRgCIAEoCCJmCgREYXRlEk8KCG1ldGFkYXRhGAEg",
+            "ASgLMj0ub3JnLnNpbGFfc3RhbmRhcmQudjIucmVhbGVhc2VfY2FuZGlkYXRl",
+            "LnN0ZGxpYi5TaUxBX01ldGFkYXRhEg0KBXZhbHVlGAIgASgJInwKDVNpTEFf",
+            "TWV0YWRhdGESEAoIcHJvZ3Jlc3MYASABKAESWQoSZXN0aW1hdGVkX2R1cmF0",
+            "aW9uGAIgASgLMj0ub3JnLnNpbGFfc3RhbmRhcmQudjIucmVhbGVhc2VfY2Fu",
+            "ZGlkYXRlLnN0ZGxpYi5QaHlzaWNhbFZhbHVlImYKElNpTEFfRXJyb3JfTWVz",
+            "c2FnZRIMCgR0eXBlGAEgASgJEhMKC2Rlc2NyaXB0aW9uGAIgASgJEhsKE3N0",
+            "YW5kYXJkX2Vycm9yX25hbWUYAyABKAkSEAoIcmVkaXJlY3QYBCABKAkiuwEK",
+            "FVNpTEFfUHJvcGVydHlfUmVxdWVzdBJQCglmcmVxdWVuY3kYASABKAsyPS5v",
+            "cmcuc2lsYV9zdGFuZGFyZC52Mi5yZWFsZWFzZV9jYW5kaWRhdGUuc3RkbGli",
+            "LlBoeXNpY2FsVmFsdWUSUAoJdGhyZXNob2xkGAIgASgLMj0ub3JnLnNpbGFf",
+            "c3RhbmRhcmQudjIucmVhbGVhc2VfY2FuZGlkYXRlLnN0ZGxpYi5QaHlzaWNh",
+            "bFZhbHVlYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.Empty), global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.Empty.Parser, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.String), global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.String.Parser, new[]{ "Data" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.Double), global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.Double.Parser, new[]{ "Data" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.Void), global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.Void.Parser, new[]{ "Metadata" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.String), global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.String.Parser, new[]{ "Metadata", "Value" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.Integer), global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.Integer.Parser, new[]{ "Metadata", "Value" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.RealNumbber), global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.RealNumbber.Parser, new[]{ "Metadata", "Value" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.ComplexNumber), global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.ComplexNumber.Parser, new[]{ "Metadata", "RealValue", "ImaginaryValue" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.PhysicalValue), global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.PhysicalValue.Parser, new[]{ "Metadata", "Value", "Unit" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.Unit), global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.Unit.Parser, new[]{ "Metadata", "Value" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.Boolean), global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.Boolean.Parser, new[]{ "Metadata", "Value" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.Date), global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.Date.Parser, new[]{ "Metadata", "Value" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.SiLA_Metadata), global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.SiLA_Metadata.Parser, new[]{ "Progress", "EstimatedDuration" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.SiLA_Error_Message), global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.SiLA_Error_Message.Parser, new[]{ "Type", "Description", "StandardErrorName", "Redirect" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.SiLA_Property_Request), global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.SiLA_Property_Request.Parser, new[]{ "Frequency", "Threshold" }, null, null, null)
           }));
     }
     #endregion
@@ -40,12 +81,12 @@ namespace Org.SilaStandard.V2.RealeaseCandidate.Stdlib {
   #region Messages
   /// <summary>
   ///  Empty Message
-  ///  Used for Properties
+  ///  Used for Properties or
   /// </summary>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-  public sealed partial class Empty : pb::IMessage<Empty> {
-    private static readonly pb::MessageParser<Empty> _parser = new pb::MessageParser<Empty>(() => new Empty());
-    public static pb::MessageParser<Empty> Parser { get { return _parser; } }
+  public sealed partial class Void : pb::IMessage<Void> {
+    private static readonly pb::MessageParser<Void> _parser = new pb::MessageParser<Void>(() => new Void());
+    public static pb::MessageParser<Void> Parser { get { return _parser; } }
 
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.StdlibReflection.Descriptor.MessageTypes[0]; }
@@ -55,35 +96,48 @@ namespace Org.SilaStandard.V2.RealeaseCandidate.Stdlib {
       get { return Descriptor; }
     }
 
-    public Empty() {
+    public Void() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
-    public Empty(Empty other) : this() {
+    public Void(Void other) : this() {
+      Metadata = other.metadata_ != null ? other.Metadata.Clone() : null;
     }
 
-    public Empty Clone() {
-      return new Empty(this);
+    public Void Clone() {
+      return new Void(this);
+    }
+
+    /// <summary>Field number for the "metadata" field.</summary>
+    public const int MetadataFieldNumber = 1;
+    private global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.SiLA_Metadata metadata_;
+    public global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.SiLA_Metadata Metadata {
+      get { return metadata_; }
+      set {
+        metadata_ = value;
+      }
     }
 
     public override bool Equals(object other) {
-      return Equals(other as Empty);
+      return Equals(other as Void);
     }
 
-    public bool Equals(Empty other) {
+    public bool Equals(Void other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (!object.Equals(Metadata, other.Metadata)) return false;
       return true;
     }
 
     public override int GetHashCode() {
       int hash = 1;
+      if (metadata_ != null) hash ^= Metadata.GetHashCode();
       return hash;
     }
 
@@ -92,16 +146,29 @@ namespace Org.SilaStandard.V2.RealeaseCandidate.Stdlib {
     }
 
     public void WriteTo(pb::CodedOutputStream output) {
+      if (metadata_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Metadata);
+      }
     }
 
     public int CalculateSize() {
       int size = 0;
+      if (metadata_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Metadata);
+      }
       return size;
     }
 
-    public void MergeFrom(Empty other) {
+    public void MergeFrom(Void other) {
       if (other == null) {
         return;
+      }
+      if (other.metadata_ != null) {
+        if (metadata_ == null) {
+          metadata_ = new global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.SiLA_Metadata();
+        }
+        Metadata.MergeFrom(other.Metadata);
       }
     }
 
@@ -112,6 +179,13 @@ namespace Org.SilaStandard.V2.RealeaseCandidate.Stdlib {
           default:
             input.SkipLastField();
             break;
+          case 10: {
+            if (metadata_ == null) {
+              metadata_ = new global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.SiLA_Metadata();
+            }
+            input.ReadMessage(metadata_);
+            break;
+          }
         }
       }
     }
@@ -141,20 +215,31 @@ namespace Org.SilaStandard.V2.RealeaseCandidate.Stdlib {
     partial void OnConstruction();
 
     public String(String other) : this() {
-      data_ = other.data_;
+      Metadata = other.metadata_ != null ? other.Metadata.Clone() : null;
+      value_ = other.value_;
     }
 
     public String Clone() {
       return new String(this);
     }
 
-    /// <summary>Field number for the "data" field.</summary>
-    public const int DataFieldNumber = 1;
-    private string data_ = "";
-    public string Data {
-      get { return data_; }
+    /// <summary>Field number for the "metadata" field.</summary>
+    public const int MetadataFieldNumber = 1;
+    private global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.SiLA_Metadata metadata_;
+    public global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.SiLA_Metadata Metadata {
+      get { return metadata_; }
       set {
-        data_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        metadata_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "value" field.</summary>
+    public const int ValueFieldNumber = 2;
+    private string value_ = "";
+    public string Value {
+      get { return value_; }
+      set {
+        value_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -169,13 +254,15 @@ namespace Org.SilaStandard.V2.RealeaseCandidate.Stdlib {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Data != other.Data) return false;
+      if (!object.Equals(Metadata, other.Metadata)) return false;
+      if (Value != other.Value) return false;
       return true;
     }
 
     public override int GetHashCode() {
       int hash = 1;
-      if (Data.Length != 0) hash ^= Data.GetHashCode();
+      if (metadata_ != null) hash ^= Metadata.GetHashCode();
+      if (Value.Length != 0) hash ^= Value.GetHashCode();
       return hash;
     }
 
@@ -184,16 +271,23 @@ namespace Org.SilaStandard.V2.RealeaseCandidate.Stdlib {
     }
 
     public void WriteTo(pb::CodedOutputStream output) {
-      if (Data.Length != 0) {
+      if (metadata_ != null) {
         output.WriteRawTag(10);
-        output.WriteString(Data);
+        output.WriteMessage(Metadata);
+      }
+      if (Value.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Value);
       }
     }
 
     public int CalculateSize() {
       int size = 0;
-      if (Data.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Data);
+      if (metadata_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Metadata);
+      }
+      if (Value.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Value);
       }
       return size;
     }
@@ -202,8 +296,14 @@ namespace Org.SilaStandard.V2.RealeaseCandidate.Stdlib {
       if (other == null) {
         return;
       }
-      if (other.Data.Length != 0) {
-        Data = other.Data;
+      if (other.metadata_ != null) {
+        if (metadata_ == null) {
+          metadata_ = new global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.SiLA_Metadata();
+        }
+        Metadata.MergeFrom(other.Metadata);
+      }
+      if (other.Value.Length != 0) {
+        Value = other.Value;
       }
     }
 
@@ -215,7 +315,14 @@ namespace Org.SilaStandard.V2.RealeaseCandidate.Stdlib {
             input.SkipLastField();
             break;
           case 10: {
-            Data = input.ReadString();
+            if (metadata_ == null) {
+              metadata_ = new global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.SiLA_Metadata();
+            }
+            input.ReadMessage(metadata_);
+            break;
+          }
+          case 18: {
+            Value = input.ReadString();
             break;
           }
         }
@@ -224,10 +331,13 @@ namespace Org.SilaStandard.V2.RealeaseCandidate.Stdlib {
 
   }
 
+  /// <summary>
+  ///  Integer Message
+  /// </summary>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-  public sealed partial class Double : pb::IMessage<Double> {
-    private static readonly pb::MessageParser<Double> _parser = new pb::MessageParser<Double>(() => new Double());
-    public static pb::MessageParser<Double> Parser { get { return _parser; } }
+  public sealed partial class Integer : pb::IMessage<Integer> {
+    private static readonly pb::MessageParser<Integer> _parser = new pb::MessageParser<Integer>(() => new Integer());
+    public static pb::MessageParser<Integer> Parser { get { return _parser; } }
 
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.StdlibReflection.Descriptor.MessageTypes[2]; }
@@ -237,48 +347,61 @@ namespace Org.SilaStandard.V2.RealeaseCandidate.Stdlib {
       get { return Descriptor; }
     }
 
-    public Double() {
+    public Integer() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
-    public Double(Double other) : this() {
-      data_ = other.data_;
+    public Integer(Integer other) : this() {
+      Metadata = other.metadata_ != null ? other.Metadata.Clone() : null;
+      value_ = other.value_;
     }
 
-    public Double Clone() {
-      return new Double(this);
+    public Integer Clone() {
+      return new Integer(this);
     }
 
-    /// <summary>Field number for the "data" field.</summary>
-    public const int DataFieldNumber = 1;
-    private double data_;
-    public double Data {
-      get { return data_; }
+    /// <summary>Field number for the "metadata" field.</summary>
+    public const int MetadataFieldNumber = 1;
+    private global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.SiLA_Metadata metadata_;
+    public global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.SiLA_Metadata Metadata {
+      get { return metadata_; }
       set {
-        data_ = value;
+        metadata_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "value" field.</summary>
+    public const int ValueFieldNumber = 2;
+    private long value_;
+    public long Value {
+      get { return value_; }
+      set {
+        value_ = value;
       }
     }
 
     public override bool Equals(object other) {
-      return Equals(other as Double);
+      return Equals(other as Integer);
     }
 
-    public bool Equals(Double other) {
+    public bool Equals(Integer other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Data != other.Data) return false;
+      if (!object.Equals(Metadata, other.Metadata)) return false;
+      if (Value != other.Value) return false;
       return true;
     }
 
     public override int GetHashCode() {
       int hash = 1;
-      if (Data != 0D) hash ^= Data.GetHashCode();
+      if (metadata_ != null) hash ^= Metadata.GetHashCode();
+      if (Value != 0L) hash ^= Value.GetHashCode();
       return hash;
     }
 
@@ -287,26 +410,1074 @@ namespace Org.SilaStandard.V2.RealeaseCandidate.Stdlib {
     }
 
     public void WriteTo(pb::CodedOutputStream output) {
-      if (Data != 0D) {
-        output.WriteRawTag(9);
-        output.WriteDouble(Data);
+      if (metadata_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Metadata);
+      }
+      if (Value != 0L) {
+        output.WriteRawTag(16);
+        output.WriteInt64(Value);
       }
     }
 
     public int CalculateSize() {
       int size = 0;
-      if (Data != 0D) {
+      if (metadata_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Metadata);
+      }
+      if (Value != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(Value);
+      }
+      return size;
+    }
+
+    public void MergeFrom(Integer other) {
+      if (other == null) {
+        return;
+      }
+      if (other.metadata_ != null) {
+        if (metadata_ == null) {
+          metadata_ = new global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.SiLA_Metadata();
+        }
+        Metadata.MergeFrom(other.Metadata);
+      }
+      if (other.Value != 0L) {
+        Value = other.Value;
+      }
+    }
+
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            if (metadata_ == null) {
+              metadata_ = new global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.SiLA_Metadata();
+            }
+            input.ReadMessage(metadata_);
+            break;
+          }
+          case 16: {
+            Value = input.ReadInt64();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  ///  Real Number Message
+  /// </summary>
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+  public sealed partial class RealNumbber : pb::IMessage<RealNumbber> {
+    private static readonly pb::MessageParser<RealNumbber> _parser = new pb::MessageParser<RealNumbber>(() => new RealNumbber());
+    public static pb::MessageParser<RealNumbber> Parser { get { return _parser; } }
+
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.StdlibReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    public RealNumbber() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    public RealNumbber(RealNumbber other) : this() {
+      Metadata = other.metadata_ != null ? other.Metadata.Clone() : null;
+      value_ = other.value_;
+    }
+
+    public RealNumbber Clone() {
+      return new RealNumbber(this);
+    }
+
+    /// <summary>Field number for the "metadata" field.</summary>
+    public const int MetadataFieldNumber = 1;
+    private global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.SiLA_Metadata metadata_;
+    public global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.SiLA_Metadata Metadata {
+      get { return metadata_; }
+      set {
+        metadata_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "value" field.</summary>
+    public const int ValueFieldNumber = 2;
+    private double value_;
+    public double Value {
+      get { return value_; }
+      set {
+        value_ = value;
+      }
+    }
+
+    public override bool Equals(object other) {
+      return Equals(other as RealNumbber);
+    }
+
+    public bool Equals(RealNumbber other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(Metadata, other.Metadata)) return false;
+      if (Value != other.Value) return false;
+      return true;
+    }
+
+    public override int GetHashCode() {
+      int hash = 1;
+      if (metadata_ != null) hash ^= Metadata.GetHashCode();
+      if (Value != 0D) hash ^= Value.GetHashCode();
+      return hash;
+    }
+
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (metadata_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Metadata);
+      }
+      if (Value != 0D) {
+        output.WriteRawTag(17);
+        output.WriteDouble(Value);
+      }
+    }
+
+    public int CalculateSize() {
+      int size = 0;
+      if (metadata_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Metadata);
+      }
+      if (Value != 0D) {
         size += 1 + 8;
       }
       return size;
     }
 
-    public void MergeFrom(Double other) {
+    public void MergeFrom(RealNumbber other) {
       if (other == null) {
         return;
       }
-      if (other.Data != 0D) {
-        Data = other.Data;
+      if (other.metadata_ != null) {
+        if (metadata_ == null) {
+          metadata_ = new global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.SiLA_Metadata();
+        }
+        Metadata.MergeFrom(other.Metadata);
+      }
+      if (other.Value != 0D) {
+        Value = other.Value;
+      }
+    }
+
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            if (metadata_ == null) {
+              metadata_ = new global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.SiLA_Metadata();
+            }
+            input.ReadMessage(metadata_);
+            break;
+          }
+          case 17: {
+            Value = input.ReadDouble();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  ///  Complex Number
+  /// </summary>
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+  public sealed partial class ComplexNumber : pb::IMessage<ComplexNumber> {
+    private static readonly pb::MessageParser<ComplexNumber> _parser = new pb::MessageParser<ComplexNumber>(() => new ComplexNumber());
+    public static pb::MessageParser<ComplexNumber> Parser { get { return _parser; } }
+
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.StdlibReflection.Descriptor.MessageTypes[4]; }
+    }
+
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    public ComplexNumber() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    public ComplexNumber(ComplexNumber other) : this() {
+      Metadata = other.metadata_ != null ? other.Metadata.Clone() : null;
+      realValue_ = other.realValue_;
+      imaginaryValue_ = other.imaginaryValue_;
+    }
+
+    public ComplexNumber Clone() {
+      return new ComplexNumber(this);
+    }
+
+    /// <summary>Field number for the "metadata" field.</summary>
+    public const int MetadataFieldNumber = 1;
+    private global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.SiLA_Metadata metadata_;
+    public global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.SiLA_Metadata Metadata {
+      get { return metadata_; }
+      set {
+        metadata_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "real_value" field.</summary>
+    public const int RealValueFieldNumber = 2;
+    private double realValue_;
+    public double RealValue {
+      get { return realValue_; }
+      set {
+        realValue_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "imaginary_value" field.</summary>
+    public const int ImaginaryValueFieldNumber = 3;
+    private double imaginaryValue_;
+    public double ImaginaryValue {
+      get { return imaginaryValue_; }
+      set {
+        imaginaryValue_ = value;
+      }
+    }
+
+    public override bool Equals(object other) {
+      return Equals(other as ComplexNumber);
+    }
+
+    public bool Equals(ComplexNumber other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(Metadata, other.Metadata)) return false;
+      if (RealValue != other.RealValue) return false;
+      if (ImaginaryValue != other.ImaginaryValue) return false;
+      return true;
+    }
+
+    public override int GetHashCode() {
+      int hash = 1;
+      if (metadata_ != null) hash ^= Metadata.GetHashCode();
+      if (RealValue != 0D) hash ^= RealValue.GetHashCode();
+      if (ImaginaryValue != 0D) hash ^= ImaginaryValue.GetHashCode();
+      return hash;
+    }
+
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (metadata_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Metadata);
+      }
+      if (RealValue != 0D) {
+        output.WriteRawTag(17);
+        output.WriteDouble(RealValue);
+      }
+      if (ImaginaryValue != 0D) {
+        output.WriteRawTag(25);
+        output.WriteDouble(ImaginaryValue);
+      }
+    }
+
+    public int CalculateSize() {
+      int size = 0;
+      if (metadata_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Metadata);
+      }
+      if (RealValue != 0D) {
+        size += 1 + 8;
+      }
+      if (ImaginaryValue != 0D) {
+        size += 1 + 8;
+      }
+      return size;
+    }
+
+    public void MergeFrom(ComplexNumber other) {
+      if (other == null) {
+        return;
+      }
+      if (other.metadata_ != null) {
+        if (metadata_ == null) {
+          metadata_ = new global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.SiLA_Metadata();
+        }
+        Metadata.MergeFrom(other.Metadata);
+      }
+      if (other.RealValue != 0D) {
+        RealValue = other.RealValue;
+      }
+      if (other.ImaginaryValue != 0D) {
+        ImaginaryValue = other.ImaginaryValue;
+      }
+    }
+
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            if (metadata_ == null) {
+              metadata_ = new global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.SiLA_Metadata();
+            }
+            input.ReadMessage(metadata_);
+            break;
+          }
+          case 17: {
+            RealValue = input.ReadDouble();
+            break;
+          }
+          case 25: {
+            ImaginaryValue = input.ReadDouble();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  ///  Physical Value
+  /// </summary>
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+  public sealed partial class PhysicalValue : pb::IMessage<PhysicalValue> {
+    private static readonly pb::MessageParser<PhysicalValue> _parser = new pb::MessageParser<PhysicalValue>(() => new PhysicalValue());
+    public static pb::MessageParser<PhysicalValue> Parser { get { return _parser; } }
+
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.StdlibReflection.Descriptor.MessageTypes[5]; }
+    }
+
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    public PhysicalValue() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    public PhysicalValue(PhysicalValue other) : this() {
+      Metadata = other.metadata_ != null ? other.Metadata.Clone() : null;
+      value_ = other.value_;
+      Unit = other.unit_ != null ? other.Unit.Clone() : null;
+    }
+
+    public PhysicalValue Clone() {
+      return new PhysicalValue(this);
+    }
+
+    /// <summary>Field number for the "metadata" field.</summary>
+    public const int MetadataFieldNumber = 1;
+    private global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.SiLA_Metadata metadata_;
+    public global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.SiLA_Metadata Metadata {
+      get { return metadata_; }
+      set {
+        metadata_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "value" field.</summary>
+    public const int ValueFieldNumber = 2;
+    private double value_;
+    public double Value {
+      get { return value_; }
+      set {
+        value_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "unit" field.</summary>
+    public const int UnitFieldNumber = 3;
+    private global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.Unit unit_;
+    public global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.Unit Unit {
+      get { return unit_; }
+      set {
+        unit_ = value;
+      }
+    }
+
+    public override bool Equals(object other) {
+      return Equals(other as PhysicalValue);
+    }
+
+    public bool Equals(PhysicalValue other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(Metadata, other.Metadata)) return false;
+      if (Value != other.Value) return false;
+      if (!object.Equals(Unit, other.Unit)) return false;
+      return true;
+    }
+
+    public override int GetHashCode() {
+      int hash = 1;
+      if (metadata_ != null) hash ^= Metadata.GetHashCode();
+      if (Value != 0D) hash ^= Value.GetHashCode();
+      if (unit_ != null) hash ^= Unit.GetHashCode();
+      return hash;
+    }
+
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (metadata_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Metadata);
+      }
+      if (Value != 0D) {
+        output.WriteRawTag(17);
+        output.WriteDouble(Value);
+      }
+      if (unit_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Unit);
+      }
+    }
+
+    public int CalculateSize() {
+      int size = 0;
+      if (metadata_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Metadata);
+      }
+      if (Value != 0D) {
+        size += 1 + 8;
+      }
+      if (unit_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Unit);
+      }
+      return size;
+    }
+
+    public void MergeFrom(PhysicalValue other) {
+      if (other == null) {
+        return;
+      }
+      if (other.metadata_ != null) {
+        if (metadata_ == null) {
+          metadata_ = new global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.SiLA_Metadata();
+        }
+        Metadata.MergeFrom(other.Metadata);
+      }
+      if (other.Value != 0D) {
+        Value = other.Value;
+      }
+      if (other.unit_ != null) {
+        if (unit_ == null) {
+          unit_ = new global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.Unit();
+        }
+        Unit.MergeFrom(other.Unit);
+      }
+    }
+
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            if (metadata_ == null) {
+              metadata_ = new global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.SiLA_Metadata();
+            }
+            input.ReadMessage(metadata_);
+            break;
+          }
+          case 17: {
+            Value = input.ReadDouble();
+            break;
+          }
+          case 26: {
+            if (unit_ == null) {
+              unit_ = new global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.Unit();
+            }
+            input.ReadMessage(unit_);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  ///  Unit Message
+  /// </summary>
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+  public sealed partial class Unit : pb::IMessage<Unit> {
+    private static readonly pb::MessageParser<Unit> _parser = new pb::MessageParser<Unit>(() => new Unit());
+    public static pb::MessageParser<Unit> Parser { get { return _parser; } }
+
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.StdlibReflection.Descriptor.MessageTypes[6]; }
+    }
+
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    public Unit() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    public Unit(Unit other) : this() {
+      Metadata = other.metadata_ != null ? other.Metadata.Clone() : null;
+      value_ = other.value_;
+    }
+
+    public Unit Clone() {
+      return new Unit(this);
+    }
+
+    /// <summary>Field number for the "metadata" field.</summary>
+    public const int MetadataFieldNumber = 1;
+    private global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.SiLA_Metadata metadata_;
+    public global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.SiLA_Metadata Metadata {
+      get { return metadata_; }
+      set {
+        metadata_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "value" field.</summary>
+    public const int ValueFieldNumber = 2;
+    private string value_ = "";
+    public string Value {
+      get { return value_; }
+      set {
+        value_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    public override bool Equals(object other) {
+      return Equals(other as Unit);
+    }
+
+    public bool Equals(Unit other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(Metadata, other.Metadata)) return false;
+      if (Value != other.Value) return false;
+      return true;
+    }
+
+    public override int GetHashCode() {
+      int hash = 1;
+      if (metadata_ != null) hash ^= Metadata.GetHashCode();
+      if (Value.Length != 0) hash ^= Value.GetHashCode();
+      return hash;
+    }
+
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (metadata_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Metadata);
+      }
+      if (Value.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Value);
+      }
+    }
+
+    public int CalculateSize() {
+      int size = 0;
+      if (metadata_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Metadata);
+      }
+      if (Value.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Value);
+      }
+      return size;
+    }
+
+    public void MergeFrom(Unit other) {
+      if (other == null) {
+        return;
+      }
+      if (other.metadata_ != null) {
+        if (metadata_ == null) {
+          metadata_ = new global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.SiLA_Metadata();
+        }
+        Metadata.MergeFrom(other.Metadata);
+      }
+      if (other.Value.Length != 0) {
+        Value = other.Value;
+      }
+    }
+
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            if (metadata_ == null) {
+              metadata_ = new global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.SiLA_Metadata();
+            }
+            input.ReadMessage(metadata_);
+            break;
+          }
+          case 18: {
+            Value = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  ///  Boolean Message
+  /// </summary>
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+  public sealed partial class Boolean : pb::IMessage<Boolean> {
+    private static readonly pb::MessageParser<Boolean> _parser = new pb::MessageParser<Boolean>(() => new Boolean());
+    public static pb::MessageParser<Boolean> Parser { get { return _parser; } }
+
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.StdlibReflection.Descriptor.MessageTypes[7]; }
+    }
+
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    public Boolean() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    public Boolean(Boolean other) : this() {
+      Metadata = other.metadata_ != null ? other.Metadata.Clone() : null;
+      value_ = other.value_;
+    }
+
+    public Boolean Clone() {
+      return new Boolean(this);
+    }
+
+    /// <summary>Field number for the "metadata" field.</summary>
+    public const int MetadataFieldNumber = 1;
+    private global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.SiLA_Metadata metadata_;
+    public global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.SiLA_Metadata Metadata {
+      get { return metadata_; }
+      set {
+        metadata_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "value" field.</summary>
+    public const int ValueFieldNumber = 2;
+    private bool value_;
+    public bool Value {
+      get { return value_; }
+      set {
+        value_ = value;
+      }
+    }
+
+    public override bool Equals(object other) {
+      return Equals(other as Boolean);
+    }
+
+    public bool Equals(Boolean other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(Metadata, other.Metadata)) return false;
+      if (Value != other.Value) return false;
+      return true;
+    }
+
+    public override int GetHashCode() {
+      int hash = 1;
+      if (metadata_ != null) hash ^= Metadata.GetHashCode();
+      if (Value != false) hash ^= Value.GetHashCode();
+      return hash;
+    }
+
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (metadata_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Metadata);
+      }
+      if (Value != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(Value);
+      }
+    }
+
+    public int CalculateSize() {
+      int size = 0;
+      if (metadata_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Metadata);
+      }
+      if (Value != false) {
+        size += 1 + 1;
+      }
+      return size;
+    }
+
+    public void MergeFrom(Boolean other) {
+      if (other == null) {
+        return;
+      }
+      if (other.metadata_ != null) {
+        if (metadata_ == null) {
+          metadata_ = new global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.SiLA_Metadata();
+        }
+        Metadata.MergeFrom(other.Metadata);
+      }
+      if (other.Value != false) {
+        Value = other.Value;
+      }
+    }
+
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            if (metadata_ == null) {
+              metadata_ = new global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.SiLA_Metadata();
+            }
+            input.ReadMessage(metadata_);
+            break;
+          }
+          case 16: {
+            Value = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  ///  Date Message
+  /// </summary>
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+  public sealed partial class Date : pb::IMessage<Date> {
+    private static readonly pb::MessageParser<Date> _parser = new pb::MessageParser<Date>(() => new Date());
+    public static pb::MessageParser<Date> Parser { get { return _parser; } }
+
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.StdlibReflection.Descriptor.MessageTypes[8]; }
+    }
+
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    public Date() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    public Date(Date other) : this() {
+      Metadata = other.metadata_ != null ? other.Metadata.Clone() : null;
+      value_ = other.value_;
+    }
+
+    public Date Clone() {
+      return new Date(this);
+    }
+
+    /// <summary>Field number for the "metadata" field.</summary>
+    public const int MetadataFieldNumber = 1;
+    private global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.SiLA_Metadata metadata_;
+    public global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.SiLA_Metadata Metadata {
+      get { return metadata_; }
+      set {
+        metadata_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "value" field.</summary>
+    public const int ValueFieldNumber = 2;
+    private string value_ = "";
+    public string Value {
+      get { return value_; }
+      set {
+        value_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    public override bool Equals(object other) {
+      return Equals(other as Date);
+    }
+
+    public bool Equals(Date other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(Metadata, other.Metadata)) return false;
+      if (Value != other.Value) return false;
+      return true;
+    }
+
+    public override int GetHashCode() {
+      int hash = 1;
+      if (metadata_ != null) hash ^= Metadata.GetHashCode();
+      if (Value.Length != 0) hash ^= Value.GetHashCode();
+      return hash;
+    }
+
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (metadata_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Metadata);
+      }
+      if (Value.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Value);
+      }
+    }
+
+    public int CalculateSize() {
+      int size = 0;
+      if (metadata_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Metadata);
+      }
+      if (Value.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Value);
+      }
+      return size;
+    }
+
+    public void MergeFrom(Date other) {
+      if (other == null) {
+        return;
+      }
+      if (other.metadata_ != null) {
+        if (metadata_ == null) {
+          metadata_ = new global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.SiLA_Metadata();
+        }
+        Metadata.MergeFrom(other.Metadata);
+      }
+      if (other.Value.Length != 0) {
+        Value = other.Value;
+      }
+    }
+
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            if (metadata_ == null) {
+              metadata_ = new global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.SiLA_Metadata();
+            }
+            input.ReadMessage(metadata_);
+            break;
+          }
+          case 18: {
+            Value = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  ///  SiLA Metaddata as described in the Specification
+  ///  Required: progress
+  ///  Optional: estimated_duration
+  /// </summary>
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+  public sealed partial class SiLA_Metadata : pb::IMessage<SiLA_Metadata> {
+    private static readonly pb::MessageParser<SiLA_Metadata> _parser = new pb::MessageParser<SiLA_Metadata>(() => new SiLA_Metadata());
+    public static pb::MessageParser<SiLA_Metadata> Parser { get { return _parser; } }
+
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.StdlibReflection.Descriptor.MessageTypes[9]; }
+    }
+
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    public SiLA_Metadata() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    public SiLA_Metadata(SiLA_Metadata other) : this() {
+      progress_ = other.progress_;
+      EstimatedDuration = other.estimatedDuration_ != null ? other.EstimatedDuration.Clone() : null;
+    }
+
+    public SiLA_Metadata Clone() {
+      return new SiLA_Metadata(this);
+    }
+
+    /// <summary>Field number for the "progress" field.</summary>
+    public const int ProgressFieldNumber = 1;
+    private double progress_;
+    public double Progress {
+      get { return progress_; }
+      set {
+        progress_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "estimated_duration" field.</summary>
+    public const int EstimatedDurationFieldNumber = 2;
+    private global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.PhysicalValue estimatedDuration_;
+    public global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.PhysicalValue EstimatedDuration {
+      get { return estimatedDuration_; }
+      set {
+        estimatedDuration_ = value;
+      }
+    }
+
+    public override bool Equals(object other) {
+      return Equals(other as SiLA_Metadata);
+    }
+
+    public bool Equals(SiLA_Metadata other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Progress != other.Progress) return false;
+      if (!object.Equals(EstimatedDuration, other.EstimatedDuration)) return false;
+      return true;
+    }
+
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Progress != 0D) hash ^= Progress.GetHashCode();
+      if (estimatedDuration_ != null) hash ^= EstimatedDuration.GetHashCode();
+      return hash;
+    }
+
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Progress != 0D) {
+        output.WriteRawTag(9);
+        output.WriteDouble(Progress);
+      }
+      if (estimatedDuration_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(EstimatedDuration);
+      }
+    }
+
+    public int CalculateSize() {
+      int size = 0;
+      if (Progress != 0D) {
+        size += 1 + 8;
+      }
+      if (estimatedDuration_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(EstimatedDuration);
+      }
+      return size;
+    }
+
+    public void MergeFrom(SiLA_Metadata other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Progress != 0D) {
+        Progress = other.Progress;
+      }
+      if (other.estimatedDuration_ != null) {
+        if (estimatedDuration_ == null) {
+          estimatedDuration_ = new global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.PhysicalValue();
+        }
+        EstimatedDuration.MergeFrom(other.EstimatedDuration);
       }
     }
 
@@ -318,7 +1489,360 @@ namespace Org.SilaStandard.V2.RealeaseCandidate.Stdlib {
             input.SkipLastField();
             break;
           case 9: {
-            Data = input.ReadDouble();
+            Progress = input.ReadDouble();
+            break;
+          }
+          case 18: {
+            if (estimatedDuration_ == null) {
+              estimatedDuration_ = new global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.PhysicalValue();
+            }
+            input.ReadMessage(estimatedDuration_);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  ///  Error Message as described in the Specification
+  /// </summary>
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+  public sealed partial class SiLA_Error_Message : pb::IMessage<SiLA_Error_Message> {
+    private static readonly pb::MessageParser<SiLA_Error_Message> _parser = new pb::MessageParser<SiLA_Error_Message>(() => new SiLA_Error_Message());
+    public static pb::MessageParser<SiLA_Error_Message> Parser { get { return _parser; } }
+
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.StdlibReflection.Descriptor.MessageTypes[10]; }
+    }
+
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    public SiLA_Error_Message() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    public SiLA_Error_Message(SiLA_Error_Message other) : this() {
+      type_ = other.type_;
+      description_ = other.description_;
+      standardErrorName_ = other.standardErrorName_;
+      redirect_ = other.redirect_;
+    }
+
+    public SiLA_Error_Message Clone() {
+      return new SiLA_Error_Message(this);
+    }
+
+    /// <summary>Field number for the "type" field.</summary>
+    public const int TypeFieldNumber = 1;
+    private string type_ = "";
+    /// <summary>
+    ///  Error type
+    /// </summary>
+    public string Type {
+      get { return type_; }
+      set {
+        type_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "description" field.</summary>
+    public const int DescriptionFieldNumber = 2;
+    private string description_ = "";
+    /// <summary>
+    ///  Human-readable desription of the error
+    /// </summary>
+    public string Description {
+      get { return description_; }
+      set {
+        description_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "standard_error_name" field.</summary>
+    public const int StandardErrorNameFieldNumber = 3;
+    private string standardErrorName_ = "";
+    /// <summary>
+    ///  Standard Error Name
+    /// </summary>
+    public string StandardErrorName {
+      get { return standardErrorName_; }
+      set {
+        standardErrorName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "redirect" field.</summary>
+    public const int RedirectFieldNumber = 4;
+    private string redirect_ = "";
+    /// <summary>
+    ///  URI for Error Handling Feature
+    /// </summary>
+    public string Redirect {
+      get { return redirect_; }
+      set {
+        redirect_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    public override bool Equals(object other) {
+      return Equals(other as SiLA_Error_Message);
+    }
+
+    public bool Equals(SiLA_Error_Message other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Type != other.Type) return false;
+      if (Description != other.Description) return false;
+      if (StandardErrorName != other.StandardErrorName) return false;
+      if (Redirect != other.Redirect) return false;
+      return true;
+    }
+
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Type.Length != 0) hash ^= Type.GetHashCode();
+      if (Description.Length != 0) hash ^= Description.GetHashCode();
+      if (StandardErrorName.Length != 0) hash ^= StandardErrorName.GetHashCode();
+      if (Redirect.Length != 0) hash ^= Redirect.GetHashCode();
+      return hash;
+    }
+
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Type.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Type);
+      }
+      if (Description.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Description);
+      }
+      if (StandardErrorName.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(StandardErrorName);
+      }
+      if (Redirect.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Redirect);
+      }
+    }
+
+    public int CalculateSize() {
+      int size = 0;
+      if (Type.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Type);
+      }
+      if (Description.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Description);
+      }
+      if (StandardErrorName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(StandardErrorName);
+      }
+      if (Redirect.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Redirect);
+      }
+      return size;
+    }
+
+    public void MergeFrom(SiLA_Error_Message other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Type.Length != 0) {
+        Type = other.Type;
+      }
+      if (other.Description.Length != 0) {
+        Description = other.Description;
+      }
+      if (other.StandardErrorName.Length != 0) {
+        StandardErrorName = other.StandardErrorName;
+      }
+      if (other.Redirect.Length != 0) {
+        Redirect = other.Redirect;
+      }
+    }
+
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            Type = input.ReadString();
+            break;
+          }
+          case 18: {
+            Description = input.ReadString();
+            break;
+          }
+          case 26: {
+            StandardErrorName = input.ReadString();
+            break;
+          }
+          case 34: {
+            Redirect = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  ///  Property Request Message to hold information
+  ///  on the Threshold and Frequency when subscribing to
+  ///  a Property
+  /// </summary>
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+  public sealed partial class SiLA_Property_Request : pb::IMessage<SiLA_Property_Request> {
+    private static readonly pb::MessageParser<SiLA_Property_Request> _parser = new pb::MessageParser<SiLA_Property_Request>(() => new SiLA_Property_Request());
+    public static pb::MessageParser<SiLA_Property_Request> Parser { get { return _parser; } }
+
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.StdlibReflection.Descriptor.MessageTypes[11]; }
+    }
+
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    public SiLA_Property_Request() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    public SiLA_Property_Request(SiLA_Property_Request other) : this() {
+      Frequency = other.frequency_ != null ? other.Frequency.Clone() : null;
+      Threshold = other.threshold_ != null ? other.Threshold.Clone() : null;
+    }
+
+    public SiLA_Property_Request Clone() {
+      return new SiLA_Property_Request(this);
+    }
+
+    /// <summary>Field number for the "frequency" field.</summary>
+    public const int FrequencyFieldNumber = 1;
+    private global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.PhysicalValue frequency_;
+    public global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.PhysicalValue Frequency {
+      get { return frequency_; }
+      set {
+        frequency_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "threshold" field.</summary>
+    public const int ThresholdFieldNumber = 2;
+    private global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.PhysicalValue threshold_;
+    public global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.PhysicalValue Threshold {
+      get { return threshold_; }
+      set {
+        threshold_ = value;
+      }
+    }
+
+    public override bool Equals(object other) {
+      return Equals(other as SiLA_Property_Request);
+    }
+
+    public bool Equals(SiLA_Property_Request other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(Frequency, other.Frequency)) return false;
+      if (!object.Equals(Threshold, other.Threshold)) return false;
+      return true;
+    }
+
+    public override int GetHashCode() {
+      int hash = 1;
+      if (frequency_ != null) hash ^= Frequency.GetHashCode();
+      if (threshold_ != null) hash ^= Threshold.GetHashCode();
+      return hash;
+    }
+
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (frequency_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Frequency);
+      }
+      if (threshold_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Threshold);
+      }
+    }
+
+    public int CalculateSize() {
+      int size = 0;
+      if (frequency_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Frequency);
+      }
+      if (threshold_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Threshold);
+      }
+      return size;
+    }
+
+    public void MergeFrom(SiLA_Property_Request other) {
+      if (other == null) {
+        return;
+      }
+      if (other.frequency_ != null) {
+        if (frequency_ == null) {
+          frequency_ = new global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.PhysicalValue();
+        }
+        Frequency.MergeFrom(other.Frequency);
+      }
+      if (other.threshold_ != null) {
+        if (threshold_ == null) {
+          threshold_ = new global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.PhysicalValue();
+        }
+        Threshold.MergeFrom(other.Threshold);
+      }
+    }
+
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            if (frequency_ == null) {
+              frequency_ = new global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.PhysicalValue();
+            }
+            input.ReadMessage(frequency_);
+            break;
+          }
+          case 18: {
+            if (threshold_ == null) {
+              threshold_ = new global::Org.SilaStandard.V2.RealeaseCandidate.Stdlib.PhysicalValue();
+            }
+            input.ReadMessage(threshold_);
             break;
           }
         }
