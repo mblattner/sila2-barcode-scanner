@@ -13,7 +13,7 @@ package org.sila_standard.v2.realease_candidate.canAbort;
 service abort {
   // A simple RPC.
   //  
-  rpc abort(stdlib.Empty) returns (abortReply) {}  
+  rpc abort(stdlib.Void) returns (abortReply) {}  
 }
 
 // 

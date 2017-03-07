@@ -36,7 +36,7 @@ cd /d %~dp0
 
 set TOOLS_PATH=..\..\packages\Grpc.Tools.0.15.0\tools\windows_x86
 
-%TOOLS_PATH%\protoc.exe -Isila_standard;barcodereader --csharp_out ../../sila barcodereader/can_read_code.proto barcodereader/can_set_configuration.proto  barcodereader/can_abort.proto sila_standard/sila_error.proto sila_standard/stdlib.proto sila_standard/is_Sila.proto --grpc_out ../../sila/grpc --plugin=protoc-gen-grpc=%TOOLS_PATH%\grpc_csharp_plugin.exe
+%TOOLS_PATH%\protoc.exe -Isila_standard;barcodereader --csharp_out ../../sila barcodereader/can_read_barcode.proto barcodereader/can_set_configuration.proto  barcodereader/can_abort.proto sila_standard/sila_error.proto sila_standard/stdlib.proto sila_standard/is_sila.proto --grpc_out ../../sila/grpc --plugin=protoc-gen-grpc=%TOOLS_PATH%\grpc_csharp_plugin.exe
 @rem %TOOLS_PATH%\protoc.exe -Ibarcodereader;sila_standard --csharp_out ../devices/BarcodeReaderSila2  ../barcodereader/barcode_sila2.proto ../barcodereader/can_abort.proto ../barcodereader/barcode_configuration.proto sila_standard/stdlib.proto ../sila_standard/is_Sila.proto --grpc_out ../devices/BarcodeReaderSila2 --plugin=protoc-gen-grpc=%TOOLS_PATH%\grpc_csharp_plugin.exe
 @rem hallo
 endlocal
