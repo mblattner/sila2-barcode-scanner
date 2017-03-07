@@ -90,13 +90,6 @@ namespace BarcodeReaderGetProperty
             Console.WriteLine("Press any key to exit...");
             Console.ReadKey();
 
-            /*
-            for (int j = 0; j <= 6; j++)
-            {
-                Console.WriteLine("sleeping...." + j);
-                Thread.Sleep(100);
-            }*/
-
             tokenSource.Cancel();
             try
             {
