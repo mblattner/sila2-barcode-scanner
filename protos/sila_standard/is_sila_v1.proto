@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+// Import standard library
+import "stdlib.proto";
+
+// Namespace --> To be discussed
+package org.sila_standard.v2.realease_candidate.is_sila;
+
+
+// Feature "is_sila"
+// As taken from SiLA 1.3 for demonstration purposes
+service is_sila
+{
+    // Property: WSDL
+    rpc wsdl(stdlib.Empty) returns (stdlib.String){};
+
+    // Property: SiLA Interface Version
+    rpc sila_interface_version(stdlib.Empty) returns (stdlib.String){};
+
+    // Property: Device Manufacturer
+    rpc device_manufacturer(stdlib.Empty) returns (stdlib.String){};
+
+    // Property: Service name
+    rpc service_name(stdlib.Empty) returns (stdlib.String){};
+
+    // Property: Device serial number
+    rpc device_serial_number(stdlib.Empty) returns (stdlib.String){};
+
+    // Property: Device Firmware version
+    rpc device_firmware_version(stdlib.Empty) returns (stdlib.String){};
+
+    // Property: Avaiable Features
+    // As described in the spec the is_sila feature of a device should
+    // proivde a description for all features of the device
+
+}

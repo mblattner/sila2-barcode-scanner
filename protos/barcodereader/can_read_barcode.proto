@@ -1,0 +1,24 @@
+syntax = "proto3";
+import "stdlib.proto";
+
+option java_multiple_files = true;
+option java_package = "sila2.com.wega-it.common.barcodeReader";
+option java_outer_classname = "Matrix200Proto";
+option objc_class_prefix = "MTX";
+
+package org.sila_standard.v2.realease_candidate.canReadCode;
+
+service can_read_barcode {  
+  // returns a scanned Barcode
+  rpc read_code(stdlib.PhysicalValue) returns (stream stdlib.String) {}      
+  
+  // returns a scanned Barcode without exception
+  rpc read_code_noexp(stdlib.PhysicalValue) returns (stream stdlib.String) {}      
+  
+  //retunrs the property barcode
+  rpc barcode(stdlib.SiLA_Property_Request) returns (stream stdlib.String) {}   
+  
+  //  
+  rpc is_barcode_found(stdlib.SiLA_Property_Request) returns (stream stdlib.Boolean) {}       
+}
+
