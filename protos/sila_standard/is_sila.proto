@@ -1,0 +1,55 @@
+syntax = "proto3";
+import "stdlib.proto";
+
+// Namespace --> To be discussed
+package org.sila_standard.v2.realease_candidate.is_sila;
+
+// Feature "is_sila"
+// Version: 3
+// In this version the description of features is simplified
+//
+service is_sila
+{
+    // Property: Device Identification
+    // This Property holds all of the Information about the device
+    // This is related to the GetDeviceIdentification in SiLA 1.3
+    rpc device_identification(stdlib.Void) returns (DeviveIdentification){};
+
+    // Property: Supported Features
+    // This Property holds infortmation on all supported features of the device
+    rpc supported_features(stdlib.Void) returns (SupportedFeatures){};
+}
+
+// Message to hold all device identification information
+message DeviveIdentification
+{
+    string wsdl = 1;
+    string sila_interface_version = 2;
+    string device_manufacturer = 3;
+    string device_name = 4;
+    string device_serial_number = 5;
+    string device_firmware_version = 6;
+}
+
+// Message containing information on the supported Features
+message SupportedFeatures
+{
+    // List of feature names
+    repeated FeatureDescription features = 1;
+}
+
+// Description of a feature
+message FeatureDescription
+{
+    // Name of the feature
+    string feature_name = 1;
+
+    // Description of the feature
+    // This contains all information that is specified
+    // in the Specification
+    // Potential Format: XML, JSON
+    string feature_description = 2;
+
+    // Proto File of the Feature as a string
+    string proto_file = 3;
+}
